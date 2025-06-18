@@ -1,0 +1,17 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.accordion-button::after {
+  transition: transform 0.2s ease-in-out;
+}
+
+.progress {
+  height: 20px;
+}
