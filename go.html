@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuestionario Interactivo</title>
+    <!-- Bootstrap CSS local -->
+  <link rel="stylesheet" href="/bootstrap-5.3.7-dist/css/bootstrap.min.css" />
+  <!-- Tu propio CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body class="bg-light d-flex align-items-start justify-content-center min-vh-100">
+  <div class="container d-flex justify-content-center">
+    <div class="w-100" style="max-width: 1000px;">
+    <!-- Barra de progreso con número de pregunta -->
+    <div class="mb-4">
+    <img src="/project/assets/img/logo.jpg" alt="Portada del cuestionario" class="img-fluid w-100 rounded" style="max-height: 400px; object-fit: cover;" />
+    </div>
+
+ 
+    <!-- Progress Bar-->
+    <div class="mb-4">
+       
+      <div class="d-flex justify-content-between align-items-center">
+        <span id="currentQuestion" class="fw-bold">Seccion I</span>
+        <div class="progress flex-grow-1 ms-3">
+          <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;">
+            0%
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenedor dinámico de secciones de preguntas -->
+    <div id="cuestionario">
+      <!-- Sección 1: Preguntas 1-5 -->
+      <div class="accordion question-section " id="section-1">
+       <!-- Preguntas 1-5 (igual que antes) -->
+      
+  <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button  class="accordion-button btn-encabezado collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml1">
+     1. ¿Realizas tareas de distintos puestos de trabajo? 
+    </button>
+  </h2>
+  <div id="collapseHtml1" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">No</th>
+              <th class="sticky-header">Si,tareas de nivel superior</th>
+              <th class="sticky-header">Si,tareas de nivel inferior</th>
+              <th class="sticky-header">Si,tareas del mismo nivel</th>
+              <th class="sticky-header">si</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp1" id="s1P1_1" value="rbs1P1_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_2" value="rbs1P1_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_3" value="rbs1P1_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_4" value="rbs1P1_4" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_5" value="rbs1P1_5" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+ <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button  class="accordion-button btn-encabezado collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml1">
+     1. ¿Realizas tareas de distintos puestos de trabajo? 
+    </button>
+  </h2>
+  <div id="collapseHtml1" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">No</th>
+              <th class="sticky-header">Si,tareas de nivel superior</th>
+              <th class="sticky-header">Si,tareas de nivel inferior</th>
+              <th class="sticky-header">Si,tareas del mismo nivel</th>
+              <th class="sticky-header">si</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp1" id="s1P1_1" value="rbs1P1_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_2" value="rbs1P1_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_3" value="rbs1P1_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_4" value="rbs1P1_4" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_5" value="rbs1P1_5" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+
+        <!-- Navegación -->
+        <div class="d-flex justify-content-end mt-3">
+          <button type="button" class="btn btn-primary" onclick="cambiarSeccion(2, 25, 2)">Siguiente</button>
+        </div>
+      </div>
+
+      <!-- Sección 2: Preguntas 6-10 -->
+      <div class="accordion question-section d-none" id="section-2">
+
+    <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button  class="accordion-button btn-encabezado collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml1">
+     1. ¿Realizas tareas de distintos puestos de trabajo? 
+    </button>
+  </h2>
+  <div id="collapseHtml1" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">No</th>
+              <th class="sticky-header">Si,tareas de nivel superior</th>
+              <th class="sticky-header">Si,tareas de nivel inferior</th>
+              <th class="sticky-header">Si,tareas del mismo nivel</th>
+              <th class="sticky-header">si</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp1" id="s1P1_1" value="rbs1P1_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_2" value="rbs1P1_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_3" value="rbs1P1_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_4" value="rbs1P1_4" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_5" value="rbs1P1_5" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+ <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button  class="accordion-button btn-encabezado collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml1">
+     1. ¿Realizas tareas de distintos puestos de trabajo? 
+    </button>
+  </h2>
+  <div id="collapseHtml1" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">No</th>
+              <th class="sticky-header">Si,tareas de nivel superior</th>
+              <th class="sticky-header">Si,tareas de nivel inferior</th>
+              <th class="sticky-header">Si,tareas del mismo nivel</th>
+              <th class="sticky-header">si</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp1" id="s1P1_1" value="rbs1P1_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_2" value="rbs1P1_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_3" value="rbs1P1_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_4" value="rbs1P1_4" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_5" value="rbs1P1_5" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+        <!-- Navegación -->
+        <div class="d-flex justify-content-between mt-3">
+          <button type="button" class="btn btn-secondary" onclick="cambiarSeccion(1, 0, 1)">Atrás</button>
+          <button type="button" class="btn btn-primary" onclick="cambiarSeccion(3, 50, 3)">Siguiente</button>
+        </div>
+      </div>
+
+      <button id="btnVolverArriba" class="btn btn-primary rounded-circle shadow" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" title="Volver al inicio">
+       ⬆
+      </button>
+    </div>
+ 
+  </div>
+
+
+  <!-- Bootstrap JS local -->
+  <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>    
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+</html>

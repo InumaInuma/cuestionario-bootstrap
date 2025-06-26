@@ -1,0 +1,244 @@
+/* -------- Estilos generales anteriores -------- */
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.accordion-button::after {
+  transition: transform 0.2s ease-in-out;
+}
+
+.progress {
+  height: 20px;
+}
+
+#btnVolverArriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  font-size: 14px;
+}
+
+.btn-encabezado {
+  background-color: rgb(36, 87, 240) !important;
+  color: white !important;
+}
+
+.btn-encabezado:not(.collapsed) {
+  background-color: rgb(36, 87, 240) !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.checkmark-circle {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: #28a745;
+  border-radius: 50%;
+  position: relative;
+}
+
+.checkmark {
+  width: 35px;
+  height: 70px;
+  border-right: 6px solid #fff;
+  border-bottom: 6px solid #fff;
+  transform: rotate(45deg);
+  animation: drawCheck 0.6s ease forwards;
+}
+
+@keyframes drawCheck {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 35px;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 35px;
+    height: 70px;
+    opacity: 1;
+  }
+}
+
+/* --- Estilo para imagen del login --- */
+.login-container {
+  max-width: 900px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.login-img {
+  height: 100%;
+ 
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .login-img {
+    border-radius: 1rem 1rem 0 0;
+    max-height: 250px;
+  
+  }
+}
+
+/* Estilo general del formulario */
+.login-form {
+  padding: 40px;
+}
+
+.login-form h3 {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.btn-login {
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+#btnCerrarSesion:hover {
+  background-color: #c82333;
+}
+
+.custom-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-img-container {
+  width: 100%;
+  max-width: 1000px; /* O el ancho máximo que tú desees */
+  margin: 0 auto;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 700px; /* Puedes cambiar este valor como gustes */
+  border-radius: 10px;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header-img {
+    max-height: 100px;
+  }
+}
+/* Radio button  */
+.form-check-input[type="radio"] {
+  border: 2px solid #007bff; /* color azul Bootstrap */
+  width: 20px;
+  height: 20px;
+  margin: 5px auto;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Al pasar el mouse */
+.form-check-input[type="radio"]:hover {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.6);
+}
+
+/* Cuando está seleccionado */
+.form-check-input[type="radio"]:checked {
+  background-color: #007bff;
+  border-color: #0056b3;
+}
+
+/* barra progreso */
+.header-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* barra progreso */
+.circular-wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background: conic-gradient(#0d6efd 0%, #dee2e6 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 2px solid #dee2e6;
+  transition: background 0.5s ease-in-out;
+  box-shadow:
+    0 0 0 4px #ffffff,
+    0 4px 10px rgba(0, 0, 0, 0.15),
+    inset 0 0 8px rgba(13, 110, 253, 0.2);
+}
+
+.circular-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 72%;
+  height: 72%;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.circular-text {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  color: #0d6efd;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .circular-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circular-text {
+    font-size: 0.9rem;
+  }
+}

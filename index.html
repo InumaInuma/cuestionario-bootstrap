@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuestionario Interactivo</title>
+    <!-- Bootstrap CSS local -->
+  <link rel="stylesheet" href="/bootstrap-5.3.7-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/project/assets/bootstrap-icons-1.13.1/bootstrap-icons.css">
+<link rel="stylesheet" href="project/assets/sweetalert2-main/sweetalert2.min.css">
+
+  <!-- Tu propio CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body class="bg-light min-vh-100">
+
+<div class="d-flex justify-content-end py-3">
+      <button id="btnCerrarSesion" class="btn btn-danger shadow">
+        <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+      </button>
+    </div>
+<!-- CABECERA RESPONSIVA -->
+<div class="header-container text-center mb-4 px-3">
+  <!-- Imagen -->
+  <div class="header-img-container mb-3">
+    <img src="/project/assets/img/logo.jpg" alt="Portada del cuestionario" class="img-fluid rounded header-img" style="max-height: 700px; object-fit: cover;" />
+  </div>
+
+  <!-- Info y progress -->
+  
+    <span id="currentQuestion" class="fw-bold mb-3 d-block text-primary fs-3">Sección I</span>
+
+
+    <div class="position-relative circular-wrapper mx-auto" id="circularVisual">
+      <div class="circular-text" id="circularText">0%</div>
+
+      <!-- Barra invisible para el JS -->
+      <div class="progress flex-grow-1 ms-3 d-none">
+        <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
+      </div>
+    </div>
+
+</div>
+
+ 
+ 
+
+
+<div class="container-fluid px-3">
+    <div class="w-100 custom-container">
+    <!-- Barra de progreso con número de pregunta -->
+  
+
+
+
+    <!-- Contenedor dinámico de secciones de preguntas -->
+    <div id="cuestionario">
+      <!-- Sección 1: Preguntas 1-5 -->
+      <div class="accordion question-section " id="section-1">
+       <!-- Preguntas 1-5 (igual que antes) -->
+      
+  <!-- Pregunta 1 -->
+     <!-- Pregunta principal con subpregunta -->
+<!-- Pregunta principal con subpregunta tipo tabla -->
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button  class="accordion-button btn-encabezado collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml1">
+     1. ¿Realizas tareas de distintos puestos de trabajo? 
+    </button>
+  </h2>
+  <div id="collapseHtml1" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">No</th>
+              <th class="sticky-header">Si,tareas de nivel superior</th>
+              <th class="sticky-header">Si,tareas de nivel inferior</th>
+              <th class="sticky-header">Si,tareas del mismo nivel</th>
+              <th class="sticky-header">si</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp1" id="s1P1_1" value="rbs1P1_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_2" value="rbs1P1_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_3" value="rbs1P1_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_4" value="rbs1P1_4" class="form-check-input"></td>
+              <td><input type="radio" name="sp1" id="s1P1_5" value="rbs1P1_5" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button  class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml2">
+     2. En el último año ¿tus superiores te han consultado sobre cómo mejorar la forma de
+realizar el trabajo? 
+    </button>
+
+  </h2>
+  <div id="collapseHtml2" class="accordion-collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Siempre</th>
+              <th class="sticky-header">Muchas veces</th>
+              <th class="sticky-header">Algunas veces</th>
+              <th class="sticky-header">Pocas veces</th>
+              <th class="sticky-header">Nunca</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp2" id="s1P2_1" value="rbs1P2_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp2" id="s1P2_2" value="rbs1P2_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp2" id="s1P2_3" value="rbs1P2_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp2" id="s1P2_4" value="rbs1P2_4" class="form-check-input"></td>
+              <td><input type="radio" name="sp2" id="s1P2_5" value="rbs1P2_5" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml3">
+     3. ¿Consideras que tu trabajo actual corresponde a tu puesto y salario? 
+    </button>
+  </h2>
+  <div id="collapseHtml3" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Sí</th>
+              <th class="sticky-header">No, hago tareas de mayor categoría</th>
+              <th class="sticky-header">No, hago tareas de menor categoría</th>
+              <th class="sticky-header">No lo sé</th>
+              
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp3" id="s1P3_1" value="rbs1P3_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp3" id="s1P3_2" value="rbs1P3_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp3" id="s1P3_3" value="rbs1P3_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp3" id="s1P3_4" value="rbs1P3_4" class="form-check-input"></td>
+              
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml4">
+     4. ¿Cuánto tiempo llevas trabajando en la organización?  
+    </button>
+  </h2>
+  <div id="collapseHtml4" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Menos de 1 mes</th>
+              <th class="sticky-header">1 / hasta 6 meses</th>
+              <th class="sticky-header">Más de 6 meses / hasta 2 años</th>
+              <th class="sticky-header">Más de 2 / hasta 5años</th>
+              <th class="sticky-header">Más de 5 / hasta 10 años</th>
+              <th class="sticky-header">Más de 10 años</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp4" id="s1P4_1" value="rbs1P4_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp4" id="s1P4_2" value="rbs1P4_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp4" id="s1P4_3" value="rbs1P4_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp4" id="s1P4_4" value="rbs1P4_4" class="form-check-input"></td>
+               <td><input type="radio" name="sp4" id="s1P4_5" value="rbs1P4_5" class="form-check-input"></td>
+              <td><input type="radio" name="sp4" id="s1P4_6" value="rbs1P4_6" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml5">
+     5. ¿Qué tipo de relación laboral tienes con la organización? 
+    </button>
+  </h2>
+  <div id="collapseHtml5" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Contrato indeterminado</th>
+              <th class="sticky-header">Contrato a plazo fijo</th>
+              <th class="sticky-header">Contrato modalidad formativa (practicante)</th>
+              <th class="sticky-header">Contrato temporal por obra y servicio (trabajos específicos)</th>
+              <th class="sticky-header">Sin contrato</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp5" id="s1P5_1" value="rbs1P5_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp5" id="s1P5_2" value="rbs1P5_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp5" id="s1P5_3" value="rbs1P5_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp5" id="s1P5_4" value="rbs1P5_4" class="form-check-input"></td>
+               <td><input type="radio" name="sp5" id="s1P_5" value="rbs1P_5" class="form-check-input"></td>
+              
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml6">
+    6. Desde que ingresaste a la organización ¿has ascendido de puesto?  
+    </button>
+  </h2>
+  <div id="collapseHtml6" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">No</th>
+              <th class="sticky-header">Sí, una vez</th>
+              <th class="sticky-header">Sí, dos veces </th>
+              <th class="sticky-header">Sí, más de dos veces</th>
+              
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="radio" name="sp6" id="s1P6_1" value="rbs1P6_1" class="form-check-input"></td>
+<td><input type="radio" name="sp6" id="s1P6_2" value="rbs1P6_2" class="form-check-input"></td>
+<td><input type="radio" name="sp6" id="s1P6_3" value="rbs1P6_3" class="form-check-input"></td>
+<td><input type="radio" name="sp6" id="s1P6_4" value="rbs1P6_4" class="form-check-input"></td>
+
+               
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml">
+      7. Habitualmente 
+    </button>
+  </h2>
+  <div id="collapseHtml" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;"></th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Ninguno</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Uno al mes</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">2 al mes</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">3 o más</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">¿Cuántos sábados al mes trabajas? </td>
+                       <td><input type="radio" name="sp7" id="s1P7_1" value="rbs1P7_1" class="form-check-input"></td>
+                       <td><input type="radio" name="sp7" id="s1P7_2" value="rbs1P7_2" class="form-check-input"></td>
+                       <td><input type="radio" name="sp7" id="s1P7_3" value="rbs1P7_3" class="form-check-input"></td>
+                       <td><input type="radio" name="sp7" id="s1P7_4" value="rbs1P7_4" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+          <tbody>
+            <tr >
+             <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">¿Cuántos domingos al mes trabajas? </td>
+             <td><input type="radio" name="sp8" id="s1P8_1" value="rbs1P8_1" class="form-check-input"></td>
+             <td><input type="radio" name="sp8" id="s1P8_2" value="rbs1P8_2" class="form-check-input"></td>
+             <td><input type="radio" name="sp8" id="s1P8_3" value="rbs1P8_3" class="form-check-input"></td>
+             <td><input type="radio" name="sp8" id="s1P8_4" value="rbs1P8_4" class="form-check-input"></td>
+
+
+            </tr>
+          </tbody>
+        
+           
+          
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+       <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml7">
+    8. ¿Cuál es tu horario de trabajo? 
+    </button>
+  </h2>
+  <div id="collapseHtml7" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Turno completo</th>
+              <th class="sticky-header">Parcial turno mañana</th>
+              <th class="sticky-header">Parcial turno tarde </th>
+              <th class="sticky-header">Parcial turno noche</th>
+              <th class="sticky-header">Turnos rotativos</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="radio" name="sp9" id="s1P9_1" value="rbs1P9_1" class="form-check-input"></td>
+<td><input type="radio" name="sp9" id="s1P9_2" value="rbs1P9_2" class="form-check-input"></td>
+<td><input type="radio" name="sp9" id="s1P9_3" value="rbs1P9_3" class="form-check-input"></td>
+<td><input type="radio" name="sp9" id="s1P9_4" value="rbs1P9_4" class="form-check-input"></td>
+
+               <td><input type="radio" name="sp9" id="s1P9_5" value="rbs1P9_5" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml8">
+    9. ¿Qué margen de tolerancia tienes en la hora de entrada y salida?
+    </button>
+  </h2>
+  <div id="collapseHtml8" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">No tengo margen</th>
+              <th class="sticky-header">Puedo elegir entre horarios establecidos</th>
+              <th class="sticky-header">Hasta 30 min.De margen </th>
+              <th class="sticky-header">Más de 30min. y hasta una hora</th>
+              <th class="sticky-header">Más de una hora</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+          <td><input type="radio" name="sp10" id="s1P10_1" value="rbs1P10_1" class="form-check-input"></td>
+<td><input type="radio" name="sp10" id="s1P10_2" value="rbs1P10_2" class="form-check-input"></td>
+<td><input type="radio" name="sp10" id="s1P10_3" value="rbs1P10_3" class="form-check-input"></td>
+<td><input type="radio" name="sp10" id="s1P10_4" value="rbs1P10_4" class="form-check-input"></td>
+<td><input type="radio" name="sp10" id="s1P10_5" value="rbs1P10_5" class="form-check-input"></td>
+
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml9">
+    10. Si tienes algún asunto personal o familiar ¿Puedes dejar tu puesto de trabajo al menos
+una hora? 
+
+    </button>
+  </h2>
+  <div id="collapseHtml9" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Siempre</th>
+              <th class="sticky-header">Muchas veces</th>
+              <th class="sticky-header">Algunas veces </th>
+              <th class="sticky-header">Pocas veces</th>
+              <th class="sticky-header">Nunca</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="radio" name="sp11" id="s1P11_1" value="rbs1P11_1" class="form-check-input"></td>
+<td><input type="radio" name="sp11" id="s1P11_2" value="rbs1P11_2" class="form-check-input"></td>
+<td><input type="radio" name="sp11" id="s1P11_3" value="rbs1P11_3" class="form-check-input"></td>
+<td><input type="radio" name="sp11" id="s1P11_4" value="rbs1P11_4" class="form-check-input"></td>
+<td><input type="radio" name="sp11" id="s1P11_5" value="rbs1P11_5" class="form-check-input"></td>
+
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml10">
+    11. ¿Qué parte del trabajo familiar y doméstico haces tú? 
+
+    </button>
+  </h2>
+  <div id="collapseHtml10" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Hago la mayoría de las tareas domésticas</th>
+              <th class="sticky-header">Hago la mitad de las tareas domésticas</th>
+              <th class="sticky-header">Hago una parte de las tareas domésticas</th>
+              <th class="sticky-header">Ocasionalmente hago algunas tareas domésticas</th>
+              <th class="sticky-header">No hago tareas domésticas</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="radio" name="sp12" id="s1P12_1" value="rbs1P12_1" class="form-check-input"></td>
+<td><input type="radio" name="sp12" id="s1P12_2" value="rbs1P12_2" class="form-check-input"></td>
+<td><input type="radio" name="sp12" id="s1P12_3" value="rbs1P12_3" class="form-check-input"></td>
+<td><input type="radio" name="sp12" id="s1P12_4" value="rbs1P12_4" class="form-check-input"></td>
+<td><input type="radio" name="sp12" id="s1P12_5" value="rbs1P12_5" class="form-check-input"></td>
+
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml12">
+    12. ¿Con qué frecuencia te cambian la hora de entrada y salida o los días que tienes
+establecido trabajar? 
+
+    </button>
+  </h2>
+  <div id="collapseHtml12" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Siempre </th>
+              <th class="sticky-header">Muchas veces</th>
+              <th class="sticky-header">Algunas veces</th>
+              <th class="sticky-header">Pocas veces</th>
+              <th class="sticky-header">Nunca</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td><input type="radio" name="sp13" id="s1P13_1" value="rbs1P13_1" class="form-check-input"></td>
+<td><input type="radio" name="sp13" id="s1P13_2" value="rbs1P13_2" class="form-check-input"></td>
+<td><input type="radio" name="sp13" id="s1P13_3" value="rbs1P13_3" class="form-check-input"></td>
+<td><input type="radio" name="sp13" id="s1P13_4" value="rbs1P13_4" class="form-check-input"></td>
+<td><input type="radio" name="sp13" id="s1P13_5" value="rbs1P13_5" class="form-check-input"></td>
+
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml13">
+    13. Habitualmente ¿Cuántas horas trabajas a la semana para la organización?
+
+    </button>
+  </h2>
+  <div id="collapseHtml13" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Menos de 30 horas  </th>
+              <th class="sticky-header">30 - 40 horas</th>
+              <th class="sticky-header">41 - 48 horas</th>
+              <th class="sticky-header">Más de 48 horas</th>
+             
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+           <td><input type="radio" name="sp14" id="s1P14_1" value="rbs1P14_1" class="form-check-input"></td>
+<td><input type="radio" name="sp14" id="s1P14_2" value="rbs1P14_2" class="form-check-input"></td>
+<td><input type="radio" name="sp14" id="s1P14_3" value="rbs1P14_3" class="form-check-input"></td>
+<td><input type="radio" name="sp14" id="s1P14_4" value="rbs1P14_4" class="form-check-input"></td>
+
+               
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml14">
+    14. Habitualmente ¿Cuántos días al mes prolongas tu jornada como mínimo media hora? 
+
+    </button>
+  </h2>
+  <div id="collapseHtml14" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Ninguno</th>
+              <th class="sticky-header">Alguno(eventualmente)</th>
+              <th class="sticky-header">1 - 5 días</th>
+              <th class="sticky-header">6 - 10 días</th>
+              <th class="sticky-header">11 días a más</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp15" id="s1P15_1" value="rbs1P15_1" class="form-check-input"></td>
+<td><input type="radio" name="sp15" id="s1P15_2" value="s1P15_2" class="form-check-input"></td>
+<td><input type="radio" name="sp15" id="s1P15_3" value="rbs1P15_3" class="form-check-input"></td>
+<td><input type="radio" name="sp15" id="s1P15_4" value="rbs1P15_4" class="form-check-input"></td>
+<td><input type="radio" name="sp15" id="s1P15_5" value="rbs1P15_5" class="form-check-input"></td>
+
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml15">
+      15. Teniendo en cuenta el trabajo que tienes que realizar y el tiempo asignado, dirías que:
+    </button>
+  </h2>
+  <div id="collapseHtml15" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;"></th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Siempre</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Muchas veces</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Algunas veces</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Pocas veces</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Nunca</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">En tu departamento o sección falta personal </td>
+              <td><input type="radio" name="sp16" id="s1P16_1" value="rbs1P16_1" class="form-check-input"></td>
+<td><input type="radio" name="sp16" id="s1P16_2" value="rbs1P16_2" class="form-check-input"></td>
+<td><input type="radio" name="sp16" id="s1P16_3" value="rbs1P16_3" class="form-check-input"></td>
+<td><input type="radio" name="sp16" id="s1P16_4" value="rbs1P16_4" class="form-check-input"></td>
+<td><input type="radio" name="sp16" id="s1P16_5" value="rbs1P16_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+        
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">La planificación es realista </td>
+             <td><input type="radio" name="sp17" id="s1P17_1" value="rbs1P17_1" class="form-check-input"></td>
+<td><input type="radio" name="sp17" id="s1P17_2" value="rbs1P17_2" class="form-check-input"></td>
+<td><input type="radio" name="sp17" id="s1P17_3" value="rbs1P17_3" class="form-check-input"></td>
+<td><input type="radio" name="sp17" id="s1P17_4" value="rbs1P17_4" class="form-check-input"></td>
+<td><input type="radio" name="sp17" id="s1P17_5" value="rbs1P17_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">La tecnología (máquinas, herramientas, equipos de cómputo...) con la que trabajas es la adecuada y funciona correctamente</td>
+              <td><input type="radio" name="sp18" id="s1P18_1" value="rbs1P18_1" class="form-check-input"></td>
+<td><input type="radio" name="sp18" id="s1P18_2" value="rbs1P18_2" class="form-check-input"></td>
+<td><input type="radio" name="sp18" id="s1P18_3" value="rbs1P18_3" class="form-check-input"></td>
+<td><input type="radio" name="sp18" id="s1P18_4" value="rbs1P18_4" class="form-check-input"></td>
+<td><input type="radio" name="sp18" id="s1P18_5" value="rbs1P18_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+        
+           
+          
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml16">
+    16. ¿Puedes decidir cuándo haces un descanso?
+
+    </button>
+  </h2>
+  <div id="collapseHtml16" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Siempre</th>
+              <th class="sticky-header">Muchas veces</th>
+              <th class="sticky-header">Algunas veces</th>
+              <th class="sticky-header">Pocas veces</th>
+              <th class="sticky-header">Nunca</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+             <td><input type="radio" name="sp19" id="s1P19_1" value="rbs1P19_1" class="form-check-input"></td>
+<td><input type="radio" name="sp19" id="s1P19_2" value="rbs1P19_2" class="form-check-input"></td>
+<td><input type="radio" name="sp19" id="s1P19_3" value="rbs1P19_3" class="form-check-input"></td>
+<td><input type="radio" name="sp19" id="s1P19_4" value="rbs1P19_4" class="form-check-input"></td>
+<td><input type="radio" name="sp19" id="s1P19_5" value="rbs1P19_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml17">
+    17. Aproximadamente ¿Cuánto cobras al mes?
+
+    </button>
+  </h2>
+  <div id="collapseHtml17" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">1025 soles </th>
+              <th class="sticky-header">1026 - 1500 soles</th>
+              <th class="sticky-header">1501 - 2500 soles</th>
+              <th class="sticky-header">2501 - 4000 soles</th>
+              <th class="sticky-header">Más de 4000 soles</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp20" id="s1P20_1" value="rbs1P20_1" class="form-check-input"></td>
+              <td><input type="radio" name="sp20" id="s1P20_2" value="rbs1P20_2" class="form-check-input"></td>
+              <td><input type="radio" name="sp20" id="s1P20_3" value="rbs1P20_3" class="form-check-input"></td>
+              <td><input type="radio" name="sp20" id="s1P20_4" value="rbs1P20_4" class="form-check-input"></td>
+               <td><input type="radio" name="sp20" id="s1P20_5" value="rbs1P20_5" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml18">
+    18. Tu salario es:
+
+    </button>
+  </h2>
+  <div id="collapseHtml18" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Fijo</th>
+              <th class="sticky-header">Una parte fija y una variable</th>
+              <th class="sticky-header">Variable</th>
+            
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td><input type="radio" name="sp21" id="s1P21_1" value="rbs1P21_1" class="form-check-input"></td>
+<td><input type="radio" name="sp21" id="s1P21_2" value="rbs1P21_2" class="form-check-input"></td>
+<td><input type="radio" name="sp21" id="s1P21_3" value="rbs1P21_3" class="form-check-input"></td>
+
+
+              
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+        <!-- Navegación -->
+        <div class="d-flex justify-content-end mt-3">
+          <button type="button" class="btn btn-primary" onclick="if (validarSeccion(1)) cambiarSeccion(2, 25, 2)">Siguiente</button>
+        </div>
+      </div>
+
+      <!-- Sección 2: Preguntas 6-10 -->
+      <div class="accordion question-section d-none" id="section-2">
+
+      <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml19">
+      19. Las siguientes preguntas tratan sobre las exigencias y contenidos de tu trabajo. Elige UNA
+SOLA RESPUESTA para cada una de ellas.
+
+    </button>
+  </h2>
+  <div id="collapseHtml19" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 550px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">¿Con qué frecuencia...</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Siempre</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Muchas veces</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Algunas veces</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Pocas veces</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Nunca</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tienes que trabajar muy rápido?</td>
+              <td><input type="radio" name="sp22" id="s2P22_1" value="rbs2P22_1" class="form-check-input"></td>
+<td><input type="radio" name="sp22" id="s2P22_2" value="rbs2P22_2" class="form-check-input"></td>
+<td><input type="radio" name="sp22" id="s2P22_3" value="rbs2P22_3" class="form-check-input"></td>
+<td><input type="radio" name="sp22" id="s2P22_4" value="rbs2P22_4" class="form-check-input"></td>
+<td><input type="radio" name="sp22" id="s2P22_5" value="rbs2P22_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+        
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">en tu trabajo se producen momentos o situaciones desgastadoras emocionalmente?</td>
+           <td><input type="radio" name="sp23" id="s2P23_1" value="rbs2P23_1" class="form-check-input"></td>
+<td><input type="radio" name="sp23" id="s2P23_2" value="rbs2P23_2" class="form-check-input"></td>
+<td><input type="radio" name="sp23" id="s2P23_3" value="rbs2P23_3" class="form-check-input"></td>
+<td><input type="radio" name="sp23" id="s2P23_4" value="rbs2P23_4" class="form-check-input"></td>
+<td><input type="radio" name="sp23" id="s2P23_5" value="rbs2P23_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">te retrasas en la entrega de tu trabajo?</td>
+<td><input type="radio" name="sp24" id="s2P24_1" value="rbs2P24_1" class="form-check-input"></td>
+<td><input type="radio" name="sp24" id="s2P24_2" value="rbs2P24_2" class="form-check-input"></td>
+<td><input type="radio" name="sp24" id="s2P24_3" value="rbs2P24_3" class="form-check-input"></td>
+<td><input type="radio" name="sp24" id="s2P24_4" value="rbs2P24_4" class="form-check-input"></td>
+<td><input type="radio" name="sp24" id="s2P24_5" value="rbs2P24_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo requiere que te reserves tu opinión?</td>
+        <td><input type="radio" name="sp25" id="s2P25_1" value="rbs2P25_1" class="form-check-input"></td>
+<td><input type="radio" name="sp25" id="s2P25_2" value="rbs2P25_2" class="form-check-input"></td>
+<td><input type="radio" name="sp25" id="s2P25_3" value="rbs2P25_3" class="form-check-input"></td>
+<td><input type="radio" name="sp25" id="s2P25_4" value="rbs2P25_4" class="form-check-input"></td>
+<td><input type="radio" name="sp25" id="s2P25_5" value="rbs2P25_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">la distribución de tareas es irregular y provoca que se te acumule el trabajo?</td>
+            <td><input type="radio" name="sp26" id="s2P26_1" value="rbs2P26_1" class="form-check-input"></td>
+<td><input type="radio" name="sp26" id="s2P26_2" value="rbs2P26_2" class="form-check-input"></td>
+<td><input type="radio" name="sp26" id="s2P26_3" value="rbs2P26_3" class="form-check-input"></td>
+<td><input type="radio" name="sp26" id="s2P26_4" value="rbs2P26_4" class="form-check-input"></td>
+<td><input type="radio" name="sp26" id="s2P26_5" value="rbs2P26_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo requiere que trates a todo el mundo por igual, aunque no tengas ganas?</td>
+            <td><input type="radio" name="sp27" id="s2P27_1" value="rbs2P27_1" class="form-check-input"></td>
+<td><input type="radio" name="sp27" id="s2P27_2" value="rbs2P27_2" class="form-check-input"></td>
+<td><input type="radio" name="sp27" id="s2P27_3" value="rbs2P27_3" class="form-check-input"></td>
+<td><input type="radio" name="sp27" id="s2P27_4" value="rbs2P27_4" class="form-check-input"></td>
+<td><input type="radio" name="sp27" id="s2P27_5" value="rbs2P27_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tienes tiempo suficiente para hacer tu trabajo?</td>
+             <td><input type="radio" name="sp28" id="s2P28_1" value="rbs2P28_1" class="form-check-input"></td>
+<td><input type="radio" name="sp28" id="s2P28_2" value="rbs2P28_2" class="form-check-input"></td>
+<td><input type="radio" name="sp28" id="s2P28_3" value="rbs2P28_3" class="form-check-input"></td>
+<td><input type="radio" name="sp28" id="s2P28_4" value="rbs2P28_4" class="form-check-input"></td>
+<td><input type="radio" name="sp28" id="s2P28_5" value="rbs2P28_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+           <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tienes influencia sobre el ritmo al que trabajas?</td>
+             <td><input type="radio" name="sp29" id="s2P29_1" value="rbs2P29_1" class="form-check-input"></td>
+<td><input type="radio" name="sp29" id="s2P29_2" value="rbs2P29_2" class="form-check-input"></td>
+<td><input type="radio" name="sp29" id="s2P29_3" value="rbs2P29_3" class="form-check-input"></td>
+<td><input type="radio" name="sp29" id="s2P29_4" value="rbs2P29_4" class="form-check-input"></td>
+<td><input type="radio" name="sp29" id="s2P29_5" value="rbs2P29_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tienes influencia sobre las decisiones que afectan a tu trabajo?</td>
+<td><input type="radio" name="sp30" id="s2P30_1" value="rbs2P30_1" class="form-check-input"></td>
+<td><input type="radio" name="sp30" id="s2P30_2" value="rbs2P30_2" class="form-check-input"></td>
+<td><input type="radio" name="sp30" id="s2P30_3" value="rbs2P30_3" class="form-check-input"></td>
+<td><input type="radio" name="sp30" id="s2P30_4" value="rbs2P30_4" class="form-check-input"></td>
+<td><input type="radio" name="sp30" id="s2P30_5" value="rbs2P30_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tienes influencia sobre cómo realizas tu trabajo?</td>
+      <td><input type="radio" name="sp31" id="s2P31_1" value="rbs2P31_1" class="form-check-input"></td>
+<td><input type="radio" name="sp31" id="s2P31_2" value="rbs2P31_2" class="form-check-input"></td>
+<td><input type="radio" name="sp31" id="s2P31_3" value="rbs2P31_3" class="form-check-input"></td>
+<td><input type="radio" name="sp31" id="s2P31_4" value="rbs2P31_4" class="form-check-input"></td>
+<td><input type="radio" name="sp31" id="s2P31_5" value="rbs2P31_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tienes influencia sobre qué haces en el trabajo?</td>
+          <td><input type="radio" name="sp32" id="s2P32_1" value="rbs2P32_1" class="form-check-input"></td>
+<td><input type="radio" name="sp32" id="s2P32_2" value="rbs2P32_2" class="form-check-input"></td>
+<td><input type="radio" name="sp32" id="s2P32_3" value="rbs2P32_3" class="form-check-input"></td>
+<td><input type="radio" name="sp32" id="s2P32_4" value="rbs2P32_4" class="form-check-input"></td>
+<td><input type="radio" name="sp32" id="s2P32_5" value="rbs2P32_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">hay momentos en los que necesitarías estar en la empresa y en casa a la vez?</td>
+             <td><input type="radio" name="sp33" id="s2P33_1" value="rbs2P33_1" class="form-check-input"></td>
+<td><input type="radio" name="sp33" id="s2P33_2" value="rbs2P33_2" class="form-check-input"></td>
+<td><input type="radio" name="sp33" id="s2P33_3" value="rbs2P33_3" class="form-check-input"></td>
+<td><input type="radio" name="sp33" id="s2P33_4" value="rbs2P33_4" class="form-check-input"></td>
+<td><input type="radio" name="sp33" id="s2P33_5" value="rbs2P33_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">sientes que el trabajo en la empresa te consume tanta energía que perjudica a tus tareas domésticas y familiares?</td>
+  <td><input type="radio" name="sp34" id="s2P34_1" value="rbs2P34_1" class="form-check-input"></td>
+<td><input type="radio" name="sp34" id="s2P34_2" value="rbs2P34_2" class="form-check-input"></td>
+<td><input type="radio" name="sp34" id="s2P34_3" value="rbs2P34_3" class="form-check-input"></td>
+<td><input type="radio" name="sp34" id="s2P34_4" value="rbs2P34_4" class="form-check-input"></td>
+<td><input type="radio" name="sp34" id="s2P34_5" value="rbs2P34_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">sientes que el trabajo en la empresa te ocupa tanto tiempo que perjudica a tus tareas domésticas y familiares?</td>
+           <td><input type="radio" name="sp35" id="s2P35_1" value="rbs2P35_1" class="form-check-input"></td>
+<td><input type="radio" name="sp35" id="s2P35_2" value="rbs2P35_2" class="form-check-input"></td>
+<td><input type="radio" name="sp35" id="s2P35_3" value="rbs2P35_3" class="form-check-input"></td>
+<td><input type="radio" name="sp35" id="s2P35_4" value="rbs2P35_4" class="form-check-input"></td>
+<td><input type="radio" name="sp35" id="s2P35_5" value="rbs2P35_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">piensas en las tareas domésticas y familiares cuando estás en la empresa?</td>
+<td><input type="radio" name="sp36" id="s2P36_1" value="rbs2P36_1" class="form-check-input"></td>
+<td><input type="radio" name="sp36" id="s2P36_2" value="rbs2P36_2" class="form-check-input"></td>
+<td><input type="radio" name="sp36" id="s2P36_3" value="rbs2P36_3" class="form-check-input"></td>
+<td><input type="radio" name="sp36" id="s2P36_4" value="rbs2P36_4" class="form-check-input"></td>
+<td><input type="radio" name="sp36" id="s2P36_5" value="rbs2P36_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">te resulta imposible acabar tus tareas laborales?</td>
+       <td><input type="radio" name="sp37" id="s2P37_1" value="rbs2P37_1" class="form-check-input"></td>
+<td><input type="radio" name="sp37" id="s2P37_2" value="rbs2P37_2" class="form-check-input"></td>
+<td><input type="radio" name="sp37" id="s2P37_3" value="rbs2P37_3" class="form-check-input"></td>
+<td><input type="radio" name="sp37" id="s2P37_4" value="rbs2P37_4" class="form-check-input"></td>
+<td><input type="radio" name="sp37" id="s2P37_5" value="rbs2P37_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">en tu trabajo tienes que ocuparte de los problemas personales de otros?</td>
+<td><input type="radio" name="sp38" id="s2P38_1" value="rbs2P38_1" class="form-check-input"></td>
+<td><input type="radio" name="sp38" id="s2P38_2" value="rbs2P38_2" class="form-check-input"></td>
+<td><input type="radio" name="sp38" id="s2P38_3" value="rbs2P38_3" class="form-check-input"></td>
+<td><input type="radio" name="sp38" id="s2P38_4" value="rbs2P38_4" class="form-check-input"></td>
+<td><input type="radio" name="sp38" id="s2P38_5" value="rbs2P38_5" class="form-check-input"></td>
+            </tr>
+          </tbody>
+        
+           
+          
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+
+        <!-- Navegación -->
+        <div class="d-flex justify-content-between mt-3">
+          <button type="button" class="btn btn-secondary" onclick="if (validarSeccion(2)) cambiarSeccion(1, 0, 1)">Atrás</button>
+          <button type="button" class="btn btn-primary" onclick="if (validarSeccion(2)) cambiarSeccion(3, 50, 3)">Siguiente</button>
+        </div>
+      </div>
+      <!-- Sección 3: Preguntas 11-15 -->
+      <div class="accordion question-section d-none" id="section-3">
+      
+        <!-- preguntas -->
+          <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml20">
+      20. Continuando con las exigencias y contenidos de tu trabajo, elige UNA SOLA RESPUESTA
+para cada una de las siguientes preguntas:
+
+    </button>
+  </h2>
+  <div id="collapseHtml20" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 450px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">¿En qué medida...</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En gran medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En buena medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En cierta medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En alguna medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En ninguna medida</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo requiere que tengas iniciativa? </td>
+              <td><input type="radio" name="sp39" id="s3P39_1" value="rbs3P39_1" class="form-check-input"></td>
+<td><input type="radio" name="sp39" id="s3P39_2" value="rbs3P39_2" class="form-check-input"></td>
+<td><input type="radio" name="sp39" id="s3P39_3" value="rbs3P39_3" class="form-check-input"></td>
+<td><input type="radio" name="sp39" id="s3P39_4" value="rbs3P39_4" class="form-check-input"></td>
+<td><input type="radio" name="sp39" id="s3P39_5" value="rbs3P39_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+        
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">las tareas que haces te parecen importantes? </td>
+             <td><input type="radio" name="sp40" id="s3P40_1" value="rbs3P40_1" class="form-check-input"></td>
+<td><input type="radio" name="sp40" id="s3P40_2" value="rbs3P40_2" class="form-check-input"></td>
+<td><input type="radio" name="sp40" id="s3P40_3" value="rbs3P40_3" class="form-check-input"></td>
+<td><input type="radio" name="sp40" id="s3P40_4" value="rbs3P40_4" class="form-check-input"></td>
+<td><input type="radio" name="sp40" id="s3P40_5" value="rbs3P40_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo te afecta emocionalmente?</td>
+             <td><input type="radio" name="sp41" id="s3P41_1" value="rbs3P41_1" class="form-check-input"></td>
+<td><input type="radio" name="sp41" id="s3P41_2" value="rbs3P41_2" class="form-check-input"></td>
+<td><input type="radio" name="sp41" id="s3P41_3" value="rbs3P41_3" class="form-check-input"></td>
+<td><input type="radio" name="sp41" id="s3P41_4" value="rbs3P41_4" class="form-check-input"></td>
+<td><input type="radio" name="sp41" id="s3P41_5" value="rbs3P41_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo permite que aprendas cosas nuevas? </td>
+         <td><input type="radio" name="sp42" id="s3P42_1" value="rbs3P42_1" class="form-check-input"></td>
+<td><input type="radio" name="sp42" id="s3P42_2" value="rbs3P42_2" class="form-check-input"></td>
+<td><input type="radio" name="sp42" id="s3P42_3" value="rbs3P42_3" class="form-check-input"></td>
+<td><input type="radio" name="sp42" id="s3P42_4" value="rbs3P42_4" class="form-check-input"></td>
+<td><input type="radio" name="sp42" id="s3P42_5" value="rbs3P42_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">es necesario mantener un ritmo de trabajo alto? </td>
+             <td><input type="radio" name="sp43" id="s3P43_1" value="rbs3P43_1" class="form-check-input"></td>
+<td><input type="radio" name="sp43" id="s3P43_2" value="rbs3P43_2" class="form-check-input"></td>
+<td><input type="radio" name="sp43" id="s3P43_3" value="rbs3P43_3" class="form-check-input"></td>
+<td><input type="radio" name="sp43" id="s3P43_4" value="rbs3P43_4" class="form-check-input"></td>
+<td><input type="radio" name="sp43" id="s3P43_5" value="rbs3P43_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">te sientes comprometido con tu profesión?</td>
+         <td><input type="radio" name="sp44" id="s3P44_1" value="rbs3P44_1" class="form-check-input"></td>
+<td><input type="radio" name="sp44" id="s3P44_2" value="rbs3P44_2" class="form-check-input"></td>
+<td><input type="radio" name="sp44" id="s3P44_3" value="rbs3P44_3" class="form-check-input"></td>
+<td><input type="radio" name="sp44" id="s3P44_4" value="rbs3P44_4" class="form-check-input"></td>
+<td><input type="radio" name="sp44" id="s3P44_5" value="rbs3P44_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo te da la oportunidad de mejorar tus conocimientos y habilidades? </td>
+ <td><input type="radio" name="sp45" id="s3P45_1" value="rbs3P45_1" class="form-check-input"></td>
+<td><input type="radio" name="sp45" id="s3P45_2" value="rbs3P45_2" class="form-check-input"></td>
+<td><input type="radio" name="sp45" id="s3P45_3" value="rbs3P45_3" class="form-check-input"></td>
+<td><input type="radio" name="sp45" id="s3P45_4" value="rbs3P45_4" class="form-check-input"></td>
+<td><input type="radio" name="sp45" id="s3P45_5" value="rbs3P45_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+           <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo, en general, es desgastador emocionalmente?</td>
+             <td><input type="radio" name="sp46" id="s3P46_1" value="rbs3P46_1" class="form-check-input"></td>
+<td><input type="radio" name="sp46" id="s3P46_2" value="rbs3P46_2" class="form-check-input"></td>
+<td><input type="radio" name="sp46" id="s3P46_3" value="rbs3P46_3" class="form-check-input"></td>
+<td><input type="radio" name="sp46" id="s3P46_4" value="rbs3P46_4" class="form-check-input"></td>
+<td><input type="radio" name="sp46" id="s3P46_5" value="rbs3P46_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo requiere que escondas tus emociones?</td>
+             <td><input type="radio" name="sp47" id="s3P47_1" value="rbs3P47_1" class="form-check-input"></td>
+<td><input type="radio" name="sp47" id="s3P47_2" value="rbs3P47_2" class="form-check-input"></td>
+<td><input type="radio" name="sp47" id="s3P47_3" value="rbs3P47_3" class="form-check-input"></td>
+<td><input type="radio" name="sp47" id="s3P47_4" value="rbs3P47_4" class="form-check-input"></td>
+<td><input type="radio" name="sp47" id="s3P47_5" value="rbs3P47_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">te exigen en el trabajo ser amable con todo el mundo independientemente de la forma como te traten?</td>
+       <td><input type="radio" name="sp48" id="s3P48_1" value="rbs3P48_1" class="form-check-input"></td>
+<td><input type="radio" name="sp48" id="s3P48_2" value="rbs3P48_2" class="form-check-input"></td>
+<td><input type="radio" name="sp48" id="s3P48_3" value="rbs3P48_3" class="form-check-input"></td>
+<td><input type="radio" name="sp48" id="s3P48_4" value="rbs3P48_4" class="form-check-input"></td>
+<td><input type="radio" name="sp48" id="s3P48_5" value="rbs3P48_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo permite que apliques tus habilidades y conocimientos? </td>
+          <td><input type="radio" name="sp49" id="s3P49_1" value="rbs3P49_1" class="form-check-input"></td>
+<td><input type="radio" name="sp49" id="s3P49_2" value="rbs3P49_2" class="form-check-input"></td>
+<td><input type="radio" name="sp49" id="s3P49_3" value="rbs3P49_3" class="form-check-input"></td>
+<td><input type="radio" name="sp49" id="s3P49_4" value="rbs3P49_4" class="form-check-input"></td>
+<td><input type="radio" name="sp49" id="s3P49_5" value="rbs3P49_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">el ritmo de trabajo es alto durante toda la jornada? </td>
+     <td><input type="radio" name="sp50" id="s3P50_1" value="rbs3P50_1" class="form-check-input"></td>
+<td><input type="radio" name="sp50" id="s3P50_2" value="rbs3P50_2" class="form-check-input"></td>
+<td><input type="radio" name="sp50" id="s3P50_3" value="rbs3P50_3" class="form-check-input"></td>
+<td><input type="radio" name="sp50" id="s3P50_4" value="rbs3P50_4" class="form-check-input"></td>
+<td><input type="radio" name="sp50" id="s3P50_5" value="rbs3P50_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+    
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+       <!-- preguntas -->
+          <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml21">
+ 21. Estas preguntas tratan del grado de definición de tus tareas. Elige UNA SOLA RESPUESTA
+para cada una de las siguientes preguntas
+
+
+    </button>
+  </h2>
+  <div id="collapseHtml21" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 450px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">¿En qué medida...</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En gran medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En buena medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En cierta medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En alguna medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En ninguna medida</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">en tu empresa se te informa con suficiente antelación de decisiones importantes, cambios y proyectos de futuro? </td>
+        <td><input type="radio" name="sp51" id="s3P51_1" value="rbs3P51_1" class="form-check-input"></td>
+<td><input type="radio" name="sp51" id="s3P51_2" value="rbs3P51_2" class="form-check-input"></td>
+<td><input type="radio" name="sp51" id="s3P51_3" value="rbs3P51_3" class="form-check-input"></td>
+<td><input type="radio" name="sp51" id="s3P51_4" value="rbs3P51_4" class="form-check-input"></td>
+<td><input type="radio" name="sp51" id="s3P51_5" value="rbs3P51_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+        
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo tiene objetivos claros?</td>
+<td><input type="radio" name="sp52" id="s3P52_1" value="rbs3P52_1" class="form-check-input"></td>
+<td><input type="radio" name="sp52" id="s3P52_2" value="rbs3P52_2" class="form-check-input"></td>
+<td><input type="radio" name="sp52" id="s3P52_3" value="rbs3P52_3" class="form-check-input"></td>
+<td><input type="radio" name="sp52" id="s3P52_4" value="rbs3P52_4" class="form-check-input"></td>
+<td><input type="radio" name="sp52" id="s3P52_5" value="rbs3P52_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">se te exigen cosas contradictorias en el trabajo?</td>
+  <td><input type="radio" name="sp53" id="s3P53_1" value="rbs3P53_1" class="form-check-input"></td>
+<td><input type="radio" name="sp53" id="s3P53_2" value="rbs3P53_2" class="form-check-input"></td>
+<td><input type="radio" name="sp53" id="s3P53_3" value="rbs3P53_3" class="form-check-input"></td>
+<td><input type="radio" name="sp53" id="s3P53_4" value="rbs3P53_4" class="form-check-input"></td>
+<td><input type="radio" name="sp53" id="s3P53_5" value="rbs3P53_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">sabes exactamente qué tareas son de tu responsabilidad?</td>
+        <td><input type="radio" name="sp54" id="s3P54_1" value="rbs3P54_1" class="form-check-input"></td>
+<td><input type="radio" name="sp54" id="s3P54_2" value="rbs3P54_2" class="form-check-input"></td>
+<td><input type="radio" name="sp54" id="s3P54_3" value="rbs3P54_3" class="form-check-input"></td>
+<td><input type="radio" name="sp54" id="s3P54_4" value="rbs3P54_4" class="form-check-input"></td>
+<td><input type="radio" name="sp54" id="s3P54_5" value="rbs3P54_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">recibes toda la información que necesitas para realizar bien tu trabajo?</td>
+             <td><input type="radio" name="sp55" id="s3P55_1" value="rbs3P55_1" class="form-check-input"></td>
+<td><input type="radio" name="sp55" id="s3P55_2" value="rbs3P55_2" class="form-check-input"></td>
+<td><input type="radio" name="sp55" id="s3P55_3" value="rbs3P55_3" class="form-check-input"></td>
+<td><input type="radio" name="sp55" id="s3P55_4" value="rbs3P55_4" class="form-check-input"></td>
+<td><input type="radio" name="sp55" id="s3P55_5" value="rbs3P55_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">haces cosas en el trabajo que son aceptadas por algunas personas y no por otras?</td>
+           <td><input type="radio" name="sp56" id="s3P56_1" value="rbs3P56_1" class="form-check-input"></td>
+<td><input type="radio" name="sp56" id="s3P56_2" value="rbs3P56_2" class="form-check-input"></td>
+<td><input type="radio" name="sp56" id="s3P56_3" value="rbs3P56_3" class="form-check-input"></td>
+<td><input type="radio" name="sp56" id="s3P56_4" value="rbs3P56_4" class="form-check-input"></td>
+<td><input type="radio" name="sp56" id="s3P56_5" value="rbs3P56_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">sabes exactamente qué se espera de ti en el trabajo?</td>
+             <td><input type="radio" name="sp57" id="s3P57_1" value="rbs3P57_1" class="form-check-input"></td>
+<td><input type="radio" name="sp57" id="s3P57_2" value="rbs3P57_2" class="form-check-input"></td>
+<td><input type="radio" name="sp57" id="s3P57_3" value="rbs3P57_3" class="form-check-input"></td>
+<td><input type="radio" name="sp57" id="s3P57_4" value="rbs3P57_4" class="form-check-input"></td>
+<td><input type="radio" name="sp57" id="s3P57_5" value="rbs3P57_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+           <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">sabes exactamente qué margen de autonomía tienes en tu trabajo?</td>
+ <td><input type="radio" name="sp58" id="s3P58_1" value="rbs3P58_1" class="form-check-input"></td>
+<td><input type="radio" name="sp58" id="s3P58_2" value="rbs3P58_2" class="form-check-input"></td>
+<td><input type="radio" name="sp58" id="s3P58_3" value="rbs3P58_3" class="form-check-input"></td>
+<td><input type="radio" name="sp58" id="s3P58_4" value="rbs3P58_4" class="form-check-input"></td>
+<td><input type="radio" name="sp58" id="s3P58_5" value="rbs3P58_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tienes que hacer tareas que crees que deberían hacerse de otra manera?</td>
+         <td><input type="radio" name="sp59" id="s3P59_1" value="rbs3P59_1" class="form-check-input"></td>
+<td><input type="radio" name="sp59" id="s3P59_2" value="rbs3P59_2" class="form-check-input"></td>
+<td><input type="radio" name="sp59" id="s3P59_3" value="rbs3P59_3" class="form-check-input"></td>
+<td><input type="radio" name="sp59" id="s3P59_4" value="rbs3P59_4" class="form-check-input"></td>
+<td><input type="radio" name="sp59" id="s3P59_5" value="rbs3P59_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tienes que realizar tareas que te parecen innecesarias? *</td>
+<td><input type="radio" name="sp60" id="s3P60_1" value="rbs3P60_1" class="form-check-input"></td>
+<td><input type="radio" name="sp60" id="s3P60_2" value="rbs3P60_2" class="form-check-input"></td>
+<td><input type="radio" name="sp60" id="s3P60_3" value="rbs3P60_3" class="form-check-input"></td>
+<td><input type="radio" name="sp60" id="s3P60_4" value="rbs3P60_4" class="form-check-input"></td>
+<td><input type="radio" name="sp60" id="s3P60_5" value="rbs3P60_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+    
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      </div>
+        <!-- Navegación -->
+        <div class="d-flex justify-content-between mt-3">
+          <button type="button" class="btn btn-secondary" onclick="if (validarSeccion(3)) cambiarSeccion(2, 25, 2)">Atrás</button>
+          <button type="button" class="btn btn-primary" onclick="if (validarSeccion(3)) cambiarSeccion(4, 75, 4)">Siguiente</button>
+        </div>
+      </div>
+      <!-- Sección 4: Preguntas 16-20 -->
+      <div class="accordion question-section d-none" id="section-4">
+
+          <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml22">
+ 22. Estas preguntas tratan del grado de definición de tus tareas. Elige UNA SOLA RESPUESTA
+para cada una de ellas.
+
+    </button>
+  </h2>
+  <div id="collapseHtml22" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 450px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">¿Con qué frecuencia...</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Siempre</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Muchas veces</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Algunas veces</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Pocas veces</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Nunca</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">recibes ayuda y apoyo de tus compañeros en la realización de tu trabajo? </td>
+          <td><input type="radio" name="sp61" id="s4P61_1" value="rbs4P61_1" class="form-check-input"></td>
+<td><input type="radio" name="sp61" id="s4P61_2" value="rbs4P61_2" class="form-check-input"></td>
+<td><input type="radio" name="sp61" id="s4P61_3" value="rbs4P61_3" class="form-check-input"></td>
+<td><input type="radio" name="sp61" id="s4P61_4" value="rbs4P61_4" class="form-check-input"></td>
+<td><input type="radio" name="sp61" id="s4P61_5" value="rbs4P61_5" class="form-check-input"></td>
+            </tr>
+          </tbody>
+        
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tus compañeros están dispuestos a escuchar tus problemas del trabajo?</td>
+<td><input type="radio" name="sp62" id="s4P62_1" value="rbs4P62_1" class="form-check-input"></td>
+<td><input type="radio" name="sp62" id="s4P62_2" value="rbs4P62_2" class="form-check-input"></td>
+<td><input type="radio" name="sp62" id="s4P62_3" value="rbs4P62_3" class="form-check-input"></td>
+<td><input type="radio" name="sp62" id="s4P62_4" value="rbs4P62_4" class="form-check-input"></td>
+<td><input type="radio" name="sp62" id="s4P62_5" value="rbs4P62_5" class="form-check-input"></td>
+
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tus compañeros hablan contigo sobre cómo haces tu trabajo?</td>
+      <td><input type="radio" name="sp63" id="s4P63_1" value="rbs4P63_1" class="form-check-input"></td>
+<td><input type="radio" name="sp63" id="s4P63_2" value="rbs4P63_2" class="form-check-input"></td>
+<td><input type="radio" name="sp63" id="s4P63_3" value="rbs4P63_3" class="form-check-input"></td>
+<td><input type="radio" name="sp63" id="s4P63_4" value="rbs4P63_4" class="form-check-input"></td>
+<td><input type="radio" name="sp63" id="s4P63_5" value="rbs4P63_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tienes un buen ambiente con tus compañeros de trabajo? </td>
+        <td><input type="radio" name="sp64" id="s4P64_1" value="rbs4P64_1" class="form-check-input"></td>
+<td><input type="radio" name="sp64" id="s4P64_2" value="rbs4P64_2" class="form-check-input"></td>
+<td><input type="radio" name="sp64" id="s4P64_3" value="rbs4P64_3" class="form-check-input"></td>
+<td><input type="radio" name="sp64" id="s4P64_4" value="rbs4P64_4" class="form-check-input"></td>
+<td><input type="radio" name="sp64" id="s4P64_5" value="rbs4P64_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">sientes en tu trabajo que formas parte de un grupo?</td>
+  <td><input type="radio" name="sp65" id="s4P65_1" value="rbs4P65_1" class="form-check-input"></td>
+<td><input type="radio" name="sp65" id="s4P65_2" value="rbs4P65_2" class="form-check-input"></td>
+<td><input type="radio" name="sp65" id="s4P65_3" value="rbs4P65_3" class="form-check-input"></td>
+<td><input type="radio" name="sp65" id="s4P65_4" value="rbs4P65_4" class="form-check-input"></td>
+<td><input type="radio" name="sp65" id="s4P65_5" value="rbs4P65_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">existe ayuda entre compañeros y compañeras de trabajo?</td>
+  <td><input type="radio" name="sp66" id="s4P66_1" value="rbs4P66_1" class="form-check-input"></td>
+<td><input type="radio" name="sp66" id="s4P66_2" value="rbs4P66_2" class="form-check-input"></td>
+<td><input type="radio" name="sp66" id="s4P66_3" value="rbs4P66_3" class="form-check-input"></td>
+<td><input type="radio" name="sp66" id="s4P66_4" value="rbs4P66_4" class="form-check-input"></td>
+<td><input type="radio" name="sp66" id="s4P66_5" value="rbs4P66_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu jefe inmediato está dispuesto a escuchar tus problemas del trabajo?</td>
+<td><input type="radio" name="sp67" id="s4P67_1" value="rbs4P67_1" class="form-check-input"></td>
+<td><input type="radio" name="sp67" id="s4P67_2" value="rbs4P67_2" class="form-check-input"></td>
+<td><input type="radio" name="sp67" id="s4P67_3" value="rbs4P67_3" class="form-check-input"></td>
+<td><input type="radio" name="sp67" id="s4P67_4" value="rbs4P67_4" class="form-check-input"></td>
+<td><input type="radio" name="sp67" id="s4P67_5" value="rbs4P67_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+           <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">recibes ayuda y apoyo de tu jefe inmediato en la realización de tu trabajo?</td>
+ <td><input type="radio" name="sp68" id="s4P68_1" value="rbs4P68_1" class="form-check-input"></td>
+<td><input type="radio" name="sp68" id="s4P68_2" value="rbs4P68_2" class="form-check-input"></td>
+<td><input type="radio" name="sp68" id="s4P68_3" value="rbs4P68_3" class="form-check-input"></td>
+<td><input type="radio" name="sp68" id="s4P68_4" value="rbs4P68_4" class="form-check-input"></td>
+<td><input type="radio" name="sp68" id="s4P68_5" value="rbs4P68_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu jefe inmediato habla contigo sobre cómo haces tu trabajo?</td>
+ <td><input type="radio" name="sp69" id="s4P69_1" value="rbs4P69_1" class="form-check-input"></td>
+<td><input type="radio" name="sp69" id="s4P69_2" value="rbs4P69_2" class="form-check-input"></td>
+<td><input type="radio" name="sp69" id="s4P69_3" value="rbs4P69_3" class="form-check-input"></td>
+<td><input type="radio" name="sp69" id="s4P69_4" value="rbs4P69_4" class="form-check-input"></td>
+<td><input type="radio" name="sp69" id="s4P69_5" value="rbs4P69_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+         
+    
+        </table>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+
+          <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml23">
+23. Estas preguntas se refieren hasta qué punto te preocupan posibles cambios en tus
+condiciones de trabajo. Elige UNA SOLA RESPUESTA para cada una de ellas.
+
+    </button>
+  </h2>
+  <div id="collapseHtml23" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 450px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">¿Estás preocupado(a) por...</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En gran medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En buena medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En cierta medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En alguna medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En ninguna medida</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">si te trasladan a otro centro de trabajo, unidad, departamento o sección contra tu voluntad? </td>
+     <td><input type="radio" name="sp70" id="s4P70_1" value="rbs4P70_1" class="form-check-input"></td>
+<td><input type="radio" name="sp70" id="s4P70_2" value="rbs4P70_2" class="form-check-input"></td>
+<td><input type="radio" name="sp70" id="s4P70_3" value="rbs4P70_3" class="form-check-input"></td>
+<td><input type="radio" name="sp70" id="s4P70_4" value="rbs4P70_4" class="form-check-input"></td>
+<td><input type="radio" name="sp70" id="s4P70_5" value="rbs4P70_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+        
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">si te cambian el horario (turno, días de la semana, horas de entrada y salida) contra tu voluntad?</td>
+            <td><input type="radio" name="sp71" id="s4P71_1" value="rbs4P71_1" class="form-check-input"></td>
+<td><input type="radio" name="sp71" id="s4P71_2" value="rbs4P71_2" class="form-check-input"></td>
+<td><input type="radio" name="sp71" id="s4P71_3" value="rbs4P71_3" class="form-check-input"></td>
+<td><input type="radio" name="sp71" id="s4P71_4" value="rbs4P71_4" class="form-check-input"></td>
+<td><input type="radio" name="sp71" id="s4P71_5" value="rbs4P71_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">si te cambian de tareas contra tu voluntad?</td>
+           <td><input type="radio" name="sp72" id="s4P72_1" value="rbs4P72_1" class="form-check-input"></td>
+<td><input type="radio" name="sp72" id="s4P72_2" value="rbs4P72_2" class="form-check-input"></td>
+<td><input type="radio" name="sp72" id="s4P72_3" value="rbs4P72_3" class="form-check-input"></td>
+<td><input type="radio" name="sp72" id="s4P72_4" value="rbs4P72_4" class="form-check-input"></td>
+<td><input type="radio" name="sp72" id="s4P72_5" value="rbs4P72_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">si te despiden o no te renuevan el contrato? </td>
+             <td><input type="radio" name="sp73" id="s4P73_1" value="rbs4P73_1" class="form-check-input"></td>
+<td><input type="radio" name="sp73" id="s4P73_2" value="rbs4P73_2" class="form-check-input"></td>
+<td><input type="radio" name="sp73" id="s4P73_3" value="rbs4P73_3" class="form-check-input"></td>
+<td><input type="radio" name="sp73" id="s4P73_4" value="rbs4P73_4" class="form-check-input"></td>
+<td><input type="radio" name="sp73" id="s4P73_5" value="rbs4P73_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">si te varían el salario (que no te incrementen, que te lo bajen, que introduzcan el salario variable)?</td>
+             <td><input type="radio" name="sp74" id="s4P74_1" value="rbs4P74_1" class="form-check-input"></td>
+<td><input type="radio" name="sp74" id="s4P74_2" value="rbs4P74_2" class="form-check-input"></td>
+<td><input type="radio" name="sp74" id="s4P74_3" value="rbs4P74_3" class="form-check-input"></td>
+<td><input type="radio" name="sp74" id="s4P74_4" value="rbs4P74_4" class="form-check-input"></td>
+<td><input type="radio" name="sp74" id="s4P74_5" value="rbs4P74_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">lo difícil que sería encontrar otro trabajo en el caso de que te despidan?</td>
+            <td><input type="radio" name="sp75" id="s4P75_1" value="rbs4P75_1" class="form-check-input"></td>
+<td><input type="radio" name="sp75" id="s4P75_2" value="rbs4P75_2" class="form-check-input"></td>
+<td><input type="radio" name="sp75" id="s4P75_3" value="rbs4P75_3" class="form-check-input"></td>
+<td><input type="radio" name="sp75" id="s4P75_4" value="rbs4P75_4" class="form-check-input"></td>
+<td><input type="radio" name="sp75" id="s4P75_5" value="rbs4P75_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+  
+        </table>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+
+        <!-- Navegación -->
+        <div class="d-flex justify-content-between mt-3">
+          <button type="button" class="btn btn-secondary" onclick="if (validarSeccion(4)) cambiarSeccion(3, 50, 3)">Atrás</button>
+          <button type="button" class="btn btn-primary" onclick="if (validarSeccion(4)) cambiarSeccion(5, 100, 5)">Siguiente</button>
+        </div>
+      </div>
+       <!-- Sección 5: Preguntas 21-25 -->
+      <div class="accordion question-section d-none" id="section-5">
+
+          <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed show" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml24">
+ 24. Las preguntas que siguen a continuación se refieren al reconocimiento, la confianza y la
+justicia en tu lugar de trabajo. Elige UNA SOLA RESPUESTA para cada una de ellas.
+
+    </button>
+  </h2>
+  <div id="collapseHtml24" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 350px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">¿En qué medida...</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En gran medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En buena medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En cierta medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En alguna medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En ninguna medida</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu trabajo es valorado por la dirección (altos mandos)? </td>
+           <td><input type="radio" name="sp76" id="s5P76_1" value="rbs5P76_1" class="form-check-input"></td>
+<td><input type="radio" name="sp76" id="s5P76_2" value="rbs5P76_2" class="form-check-input"></td>
+<td><input type="radio" name="sp76" id="s5P76_3" value="rbs5P76_3" class="form-check-input"></td>
+<td><input type="radio" name="sp76" id="s5P76_4" value="rbs5P76_4" class="form-check-input"></td>
+<td><input type="radio" name="sp76" id="s5P76_5" value="rbs5P76_5" class="form-check-input"></td>
+            </tr>
+          </tbody>
+        
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">la jefatura te respeta en tu trabajo?</td>
+    <td><input type="radio" name="sp77" id="s5P77_1" value="rbs5P77_1" class="form-check-input"></td>
+<td><input type="radio" name="sp77" id="s5P77_2" value="rbs5P77_2" class="form-check-input"></td>
+<td><input type="radio" name="sp77" id="s5P77_3" value="rbs5P77_3" class="form-check-input"></td>
+<td><input type="radio" name="sp77" id="s5P77_4" value="rbs5P77_4" class="form-check-input"></td>
+<td><input type="radio" name="sp77" id="s5P77_5" value="rbs5P77_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">recibes un trato justo en el trabajo? </td>
+              <td><input type="radio" name="sp78" id="s5P78_1" value="rbs5P78_1" class="form-check-input"></td>
+<td><input type="radio" name="sp78" id="s5P78_2" value="rbs5P78_2" class="form-check-input"></td>
+<td><input type="radio" name="sp78" id="s5P78_3" value="rbs5P78_3" class="form-check-input"></td>
+<td><input type="radio" name="sp78" id="s5P78_4" value="rbs5P78_4" class="form-check-input"></td>
+<td><input type="radio" name="sp78" id="s5P78_5" value="rbs5P78_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">confía la jefatura en que los trabajadores hacen un buen trabajo?</td>
+            <td><input type="radio" name="sp79" id="s5P79_1" value="rbs5P79_1" class="form-check-input"></td>
+<td><input type="radio" name="sp79" id="s5P79_2" value="rbs5P79_2" class="form-check-input"></td>
+<td><input type="radio" name="sp79" id="s5P79_3" value="rbs5P79_3" class="form-check-input"></td>
+<td><input type="radio" name="sp79" id="s5P79_4" value="rbs5P79_4" class="form-check-input"></td>
+<td><input type="radio" name="sp79" id="s5P79_5" value="rbs5P79_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">puedes confiar en la información brindada por tu jefatura?</td>
+   <td><input type="radio" name="sp80" id="s5P80_1" value="rbs5P80_1" class="form-check-input"></td>
+<td><input type="radio" name="sp80" id="s5P80_2" value="rbs5P80_2" class="form-check-input"></td>
+<td><input type="radio" name="sp80" id="s5P80_3" value="rbs5P80_3" class="form-check-input"></td>
+<td><input type="radio" name="sp80" id="s5P80_4" value="rbs5P80_4" class="form-check-input"></td>
+<td><input type="radio" name="sp80" id="s5P80_5" value="rbs5P80_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">se solucionan los conflictos de una manera justa?</td>
+           <td><input type="radio" name="sp81" id="s5P81_1" value="rbs5P81_1" class="form-check-input"></td>
+<td><input type="radio" name="sp81" id="s5P81_2" value="rbs5P81_2" class="form-check-input"></td>
+<td><input type="radio" name="sp81" id="s5P81_3" value="rbs5P81_3" class="form-check-input"></td>
+<td><input type="radio" name="sp81" id="s5P81_4" value="rbs5P81_4" class="form-check-input"></td>
+<td><input type="radio" name="sp81" id="s5P81_5" value="rbs5P81_5" class="form-check-input"></td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">se te reconoce por el trabajo bien hecho?</td>
+              <td><input type="radio" name="sp82" id="s5P82_1" value="rbs5P82_1" class="form-check-input"></td>
+<td><input type="radio" name="sp82" id="s5P82_2" value="rbs5P82_2" class="form-check-input"></td>
+<td><input type="radio" name="sp82" id="s5P82_3" value="rbs5P82_3" class="form-check-input"></td>
+<td><input type="radio" name="sp82" id="s5P82_4" value="rbs5P82_4" class="form-check-input"></td>
+<td><input type="radio" name="sp82" id="s5P82_5" value="rbs5P82_5" class="form-check-input"></td>
+            </tr>
+          </tbody>
+
+           <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">la dirección considera con la misma seriedad las propuestas procedentes de todos los trabajadores?</td>
+             <td><input type="radio" name="sp83" id="s5P83_1" value="rbs5P83_1" class="form-check-input"></td>
+<td><input type="radio" name="sp83" id="s5P83_2" value="rbs5P83_2" class="form-check-input"></td>
+<td><input type="radio" name="sp83" id="s5P83_3" value="rbs5P83_3" class="form-check-input"></td>
+<td><input type="radio" name="sp83" id="s5P83_4" value="rbs5P83_4" class="form-check-input"></td>
+<td><input type="radio" name="sp83" id="s5P83_5" value="rbs5P83_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">los trabajadores pueden expresar sus opiniones y emociones?</td>
+           <td><input type="radio" name="sp84" id="s5P84_1" value="rbs5P84_1" class="form-check-input"></td>
+<td><input type="radio" name="sp84" id="s5P84_2" value="rbs5P84_2" class="form-check-input"></td>
+<td><input type="radio" name="sp84" id="s5P84_3" value="rbs5P84_3" class="form-check-input"></td>
+<td><input type="radio" name="sp84" id="s5P84_4" value="rbs5P84_4" class="form-check-input"></td>
+<td><input type="radio" name="sp84" id="s5P84_5" value="rbs5P84_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">se distribuyen las tareas de una forma justa?</td>
+  <td><input type="radio" name="sp85" id="s5P85_1" value="rbs5P85_1" class="form-check-input"></td>
+<td><input type="radio" name="sp85" id="s5P85_2" value="rbs5P85_2" class="form-check-input"></td>
+<td><input type="radio" name="sp85" id="s5P85_3" value="rbs5P85_3" class="form-check-input"></td>
+<td><input type="radio" name="sp85" id="s5P85_4" value="rbs5P85_4" class="form-check-input"></td>
+<td><input type="radio" name="sp85" id="s5P85_5" value="rbs5P85_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+             <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu actual jefe inmediato se asegura de que cada uno de los trabajadores tiene buenas oportunidades de desarrollo profesional?</td>
+     <td><input type="radio" name="sp86" id="s5P86_1" value="rbs5P86_1" class="form-check-input"></td>
+<td><input type="radio" name="sp86" id="s5P86_2" value="rbs5P86_2" class="form-check-input"></td>
+<td><input type="radio" name="sp86" id="s5P86_3" value="rbs5P86_3" class="form-check-input"></td>
+<td><input type="radio" name="sp86" id="s5P86_4" value="rbs5P86_4" class="form-check-input"></td>
+<td><input type="radio" name="sp86" id="s5P86_5" value="rbs5P86_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+            <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu actual jefe inmediato planifica bien el trabajo? </td>
+       <td><input type="radio" name="sp87" id="s5P87_1" value="rbs5P87_1" class="form-check-input"></td>
+<td><input type="radio" name="sp87" id="s5P87_2" value="rbs5P87_2" class="form-check-input"></td>
+<td><input type="radio" name="sp87" id="s5P87_3" value="rbs5P87_3" class="form-check-input"></td>
+<td><input type="radio" name="sp87" id="s5P87_4" value="rbs5P87_4" class="form-check-input"></td>
+<td><input type="radio" name="sp87" id="s5P87_5" value="rbs5P87_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+            <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu actual jefe inmediato distribuye bien el trabajo? </td>
+     <td><input type="radio" name="sp88" id="s5P88_1" value="rbs5P88_1" class="form-check-input"></td>
+<td><input type="radio" name="sp88" id="s5P88_2" value="rbs5P88_2" class="form-check-input"></td>
+<td><input type="radio" name="sp88" id="s5P88_3" value="rbs5P88_3" class="form-check-input"></td>
+<td><input type="radio" name="sp88" id="s5P88_4" value="rbs5P88_4" class="form-check-input"></td>
+<td><input type="radio" name="sp88" id="s5P88_5" value="rbs5P88_5" class="form-check-input"></td>
+
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">tu actual jefe inmediato resuelve bien los conflictos?</td>
+           <td><input type="radio" name="sp89" id="s5P89_1" value="rbs5P89_1" class="form-check-input"></td>
+<td><input type="radio" name="sp89" id="s5P89_2" value="rbs5P89_2" class="form-check-input"></td>
+<td><input type="radio" name="sp89" id="s5P89_3" value="rbs5P89_3" class="form-check-input"></td>
+<td><input type="radio" name="sp89" id="s5P89_4" value="rbs5P89_4" class="form-check-input"></td>
+<td><input type="radio" name="sp89" id="s5P89_5" value="rbs5P89_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+
+
+         
+    
+        </table>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+
+          <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed show" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml25">
+    25. En general ¿Dirías que tu salud es? 
+
+    </button>
+  </h2>
+  <div id="collapseHtml25" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Excelente</th>
+              <th class="sticky-header">Muy buena</th>
+              <th class="sticky-header">Buena</th>
+              <th class="sticky-header">Regular</th>
+              <th class="sticky-header">Mala</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+           <td><input type="radio" name="sp90" id="s5P90_1" value="rbs5P90_1" class="form-check-input"></td>
+<td><input type="radio" name="sp90" id="s5P90_2" value="rbs5P90_2" class="form-check-input"></td>
+<td><input type="radio" name="sp90" id="s5P90_3" value="rbs5P90_3" class="form-check-input"></td>
+<td><input type="radio" name="sp90" id="s5P90_4" value="rbs5P90_4" class="form-check-input"></td>
+<td><input type="radio" name="sp90" id="s5P90_5" value="rbs5P90_5" class="form-check-input"></td>
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+
+          <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed show" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml26">
+ 26. Las preguntas que siguen se refieren a cómo te has sentido DURANTE LAS ÚLTIMAS
+CUATRO SEMANAS. Elige UNA SOLA RESPUESTA para cada una de ellas.
+
+    </button>
+  </h2>
+  <div id="collapseHtml26" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 350px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">Durante las últimas cuatro semanas ¿Con qué frecuencia...</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En gran medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En buena medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En cierta medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En alguna medida</th>
+              <th style="position: sticky; top: 0; background-color: #f8f9fa;">En ninguna medida</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">has estado emocionalmente agotado(a)?</td>
+             <td><input type="radio" name="sp91" id="s5P91_1" value="rbs5P91_1" class="form-check-input"></td>
+<td><input type="radio" name="sp91" id="s5P91_2" value="rbs5P91_2" class="form-check-input"></td>
+<td><input type="radio" name="sp91" id="s5P91_3" value="rbs5P91_3" class="form-check-input"></td>
+<td><input type="radio" name="sp91" id="s5P91_4" value="rbs5P91_4" class="form-check-input"></td>
+<td><input type="radio" name="sp91" id="s5P91_5" value="rbs5P91_5" class="form-check-input"></td>
+            </tr>
+          </tbody>
+        
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">te has sentido físicamente agotado(a)?</td>
+             <td><input type="radio" name="sp92" id="s5P92_1" value="rbs5P92_1" class="form-check-input"></td>
+<td><input type="radio" name="sp92" id="s5P92_2" value="rbs5P92_2" class="form-check-input"></td>
+<td><input type="radio" name="sp92" id="s5P92_3" value="rbs5P92_3" class="form-check-input"></td>
+<td><input type="radio" name="sp92" id="s5P92_4" value="rbs5P92_4" class="form-check-input"></td>
+<td><input type="radio" name="sp92" id="s5P92_5" value="rbs5P92_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">has estado cansado(a)?</td>
+         <td><input type="radio" name="sp93" id="s5P93_1" value="rbs5P93_1" class="form-check-input"></td>
+<td><input type="radio" name="sp93" id="s5P93_2" value="rbs5P93_2" class="form-check-input"></td>
+<td><input type="radio" name="sp93" id="s5P93_3" value="rbs5P93_3" class="form-check-input"></td>
+<td><input type="radio" name="sp93" id="s5P93_4" value="rbs5P93_4" class="form-check-input"></td>
+<td><input type="radio" name="sp93" id="s5P93_5" value="rbs5P93_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">has tenido problemas para relajarte?</td>
+    <td><input type="radio" name="sp94" id="s5P94_1" value="rbs5P94_1" class="form-check-input"></td>
+<td><input type="radio" name="sp94" id="s5P94_2" value="rbs5P94_2" class="form-check-input"></td>
+<td><input type="radio" name="sp94" id="s5P94_3" value="rbs5P94_3" class="form-check-input"></td>
+<td><input type="radio" name="sp94" id="s5P94_4" value="rbs5P94_4" class="form-check-input"></td>
+<td><input type="radio" name="sp94" id="s5P94_5" value="rbs5P94_5" class="form-check-input"></td>
+
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">has estado irritable? </td>
+             <td><input type="radio" name="sp95" id="s5P95_1" value="rbs5P95_1" class="form-check-input"></td>
+<td><input type="radio" name="sp95" id="s5P95_2" value="rbs5P95_2" class="form-check-input"></td>
+<td><input type="radio" name="sp95" id="s5P95_3" value="rbs5P95_3" class="form-check-input"></td>
+<td><input type="radio" name="sp95" id="s5P95_4" value="rbs5P95_4" class="form-check-input"></td>
+<td><input type="radio" name="sp95" id="s5P95_5" value="rbs5P95_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">has estado tenso(a)?</td>
+              <td><input type="radio" name="sp96" id="s5P96_1" value="rbs5P96_1" class="form-check-input"></td>
+<td><input type="radio" name="sp96" id="s5P96_2" value="rbs5P96_2" class="form-check-input"></td>
+<td><input type="radio" name="sp96" id="s5P96_3" value="rbs5P96_3" class="form-check-input"></td>
+<td><input type="radio" name="sp96" id="s5P96_4" value="rbs5P96_4" class="form-check-input"></td>
+<td><input type="radio" name="sp96" id="s5P96_5" value="rbs5P96_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">has estado estresado(a)?</td>
+              <td><input type="radio" name="sp97" id="s5P97_1" value="rbs5P97_1" class="form-check-input"></td>
+<td><input type="radio" name="sp97" id="s5P97_2" value="rbs5P97_2" class="form-check-input"></td>
+<td><input type="radio" name="sp97" id="s5P97_3" value="rbs5P97_3" class="form-check-input"></td>
+<td><input type="radio" name="sp97" id="s5P97_4" value="rbs5P97_4" class="form-check-input"></td>
+<td><input type="radio" name="sp97" id="s5P97_5" value="rbs5P97_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+           <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">has estado muy nervioso(a)?</td>
+            <td><input type="radio" name="sp98" id="s5P98_1" value="rbs5P98_1" class="form-check-input"></td>
+<td><input type="radio" name="sp98" id="s5P98_2" value="rbs5P98_2" class="form-check-input"></td>
+<td><input type="radio" name="sp98" id="s5P98_3" value="rbs5P98_3" class="form-check-input"></td>
+<td><input type="radio" name="sp98" id="s5P98_4" value="rbs5P98_4" class="form-check-input"></td>
+<td><input type="radio" name="sp98" id="s5P98_5" value="rbs5P98_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">te has sentido tan bajo(a) de moral que nada podía animarte?</td>
+      <td><input type="radio" name="sp99" id="s5P99_1" value="rbs5P99_1" class="form-check-input"></td>
+<td><input type="radio" name="sp99" id="s5P99_2" value="rbs5P99_2" class="form-check-input"></td>
+<td><input type="radio" name="sp99" id="s5P99_3" value="rbs5P99_3" class="form-check-input"></td>
+<td><input type="radio" name="sp99" id="s5P99_4" value="rbs5P99_4" class="form-check-input"></td>
+<td><input type="radio" name="sp99" id="s5P99_5" value="rbs5P99_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">te has sentido calmado(a) y tranquilo(a)?</td>
+            <td><input type="radio" name="sp100" id="s5P100_1" value="rbs5P100_1" class="form-check-input"></td>
+<td><input type="radio" name="sp100" id="s5P100_2" value="rbs5P100_2" class="form-check-input"></td>
+<td><input type="radio" name="sp100" id="s5P100_3" value="rbs5P100_3" class="form-check-input"></td>
+<td><input type="radio" name="sp100" id="s5P100_4" value="rbs5P100_4" class="form-check-input"></td>
+<td><input type="radio" name="sp100" id="s5P100_5" value="rbs5P100_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+             <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">te has sentido desanimado(a)?</td>
+           <td><input type="radio" name="sp101" id="s5P101_1" value="rbs5P101_1" class="form-check-input"></td>
+<td><input type="radio" name="sp101" id="s5P101_2" value="rbs5P101_2" class="form-check-input"></td>
+<td><input type="radio" name="sp101" id="s5P101_3" value="rbs5P101_3" class="form-check-input"></td>
+<td><input type="radio" name="sp101" id="s5P101_4" value="rbs5P101_4" class="form-check-input"></td>
+<td><input type="radio" name="sp101" id="s5P101_5" value="rbs5P101_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+            <tbody>
+            <tr >
+              <td class="sticky-col text-start fw-semibold table-light" style="position: sticky; left: 0; z-index: 1;">te has sentido feliz?</td>
+             <td><input type="radio" name="sp102" id="s5P102_1" value="rbs5P102_1" class="form-check-input"></td>
+<td><input type="radio" name="sp102" id="s5P102_2" value="rbs5P102_2" class="form-check-input"></td>
+<td><input type="radio" name="sp102" id="s5P102_3" value="rbs5P102_3" class="form-check-input"></td>
+<td><input type="radio" name="sp102" id="s5P102_4" value="rbs5P102_4" class="form-check-input"></td>
+<td><input type="radio" name="sp102" id="s5P102_5" value="rbs5P102_5" class="form-check-input"></td>
+           
+            </tr>
+          </tbody>
+
+     
+    
+        </table>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+
+           <div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button btn-encabezado collapsed show"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseHtml25">
+   27. ¿Cuál es tu grado de satisfacción en relación con tu trabajo, tomándolo todo en
+consideración?
+
+    </button>
+  </h2>
+  <div id="collapseHtml25" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+        <table class="table table-bordered text-center align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+           
+              <th class="sticky-header">Muy satisfecho</th>
+              <th class="sticky-header">Satisfecho</th>
+              <th class="sticky-header">Insatisfecho</th>
+              <th class="sticky-header">Muy insatisfecho</th>
+             
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+             <td><input type="radio" name="sp103" id="s5P103_1" value="rbs5P103_1" class="form-check-input"></td>
+<td><input type="radio" name="sp103" id="s5P103_2" value="rbs5P103_2" class="form-check-input"></td>
+<td><input type="radio" name="sp103" id="s5P103_3" value="rbs5P103_3" class="form-check-input"></td>
+<td><input type="radio" name="sp103" id="s5P103_4" value="rbs5P103_4" class="form-check-input"></td>
+
+              
+            </tr>
+          </tbody>
+        
+     
+        </table>
+      </div>
+    </div>
+  </div>
+  
+          </div>
+
+
+        <!-- Navegación -->
+        <div class="d-flex justify-content-between mt-3">
+          <button type="button" class="btn btn-secondary" onclick="if (validarSeccion(5)) cambiarSeccion(4, 75, 16)">Atrás</button>
+           <!-- Botón Finalizar -->
+<button type="button" class="btn btn-success"  onclick="finalizarCuestionario()">
+  FINALIZAR
+</button>
+<!-- Modal de Finalización -->
+<div class="modal fade" id="finalModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="checkmark-circle">
+        <div class="checkmark"></div>
+      </div>
+      <h4 class="mt-4 fw-bold">¡Cuestionario Finalizado!</h4>
+      <p class="text-muted">Gracias por tu participación 🙌</p>
+      <button type="button" class="btn btn-outline-primary mt-3" data-bs-dismiss="modal">Cerrar</button>
+    </div>
+  </div>
+</div>
+      </div>
+     
+
+
+    </div>
+      <button id="btnVolverArriba" class="btn btn-primary rounded-circle shadow" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" title="Volver al inicio">
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </div>
+ 
+  </div>
+
+
+  <!-- Bootstrap JS local -->
+  <script src="/project/assets/jquery/jquery.min.js"></script>
+ 
+<script src="/project/assets/sweetalert2-main/sweetalert2.min.js"></script>
+  <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>    
+  <script src="script.js"></script>
+</body>
+</html>
