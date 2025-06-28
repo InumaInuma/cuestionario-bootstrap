@@ -20,28 +20,7 @@
         <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
       </button>
     </div>
-<!-- CABECERA RESPONSIVA -->
-<div class="header-container text-center mb-4 px-3">
-  <!-- Imagen -->
-  <div class="header-img-container mb-3">
-    <img src="/project/assets/img/logo.jpg" alt="Portada del cuestionario" class="img-fluid rounded header-img" style="max-height: 700px; object-fit: cover;" />
-  </div>
 
-  <!-- Info y progress -->
-  
-    <span id="currentQuestion" class="fw-bold mb-3 d-block text-primary fs-3">Sección I</span>
-
-
-    <div class="position-relative circular-wrapper mx-auto" id="circularVisual">
-      <div class="circular-text" id="circularText">0%</div>
-
-      <!-- Barra invisible para el JS -->
-      <div class="progress flex-grow-1 ms-3 d-none">
-        <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
-      </div>
-    </div>
-
-</div>
 
  
  
@@ -51,6 +30,27 @@
     <div class="w-100 custom-container">
     <!-- Barra de progreso con número de pregunta -->
   
+<!-- CABECERA RESPONSIVA -->
+
+  <!-- Imagen -->
+  <div class="header-img-container mb-3">
+    <img id="headerImage" src="/project/assets/img/Img1.jpg" alt="Portada del cuestionario" class="img-fluid rounded header-img " style="max-height: 700px; object-fit: cover;" />
+  </div>
+
+  <!-- Info y progress -->
+  
+    <!--<span id="currentQuestion" class="fw-bold mb-3 d-block text-primary fs-3">Sección I</span>
+
+
+    <div class="position-relative circular-wrapper mx-auto" id="circularVisual">
+      <div class="circular-text" id="circularText">0%</div> -->
+
+      <!-- Barra invisible para el JS -->
+      <!--<div class="progress flex-grow-1 ms-3 d-none">
+        <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
+      </div>
+    </div>-->
+
 
 
 
@@ -1095,7 +1095,7 @@ SOLA RESPUESTA para cada una de ellas.
 
         <!-- Navegación -->
         <div class="d-flex justify-content-between mt-3">
-          <button type="button" class="btn btn-secondary" onclick="if (validarSeccion(2)) cambiarSeccion(1, 0, 1)">Atrás</button>
+          <button type="button" class="btn btn-secondary" onclick="cambiarSeccion(1, 0, 1)">Atrás</button>
           <button type="button" class="btn btn-primary" onclick="if (validarSeccion(2)) cambiarSeccion(3, 50, 3)">Siguiente</button>
         </div>
       </div>
@@ -1434,7 +1434,7 @@ para cada una de las siguientes preguntas
       </div>
         <!-- Navegación -->
         <div class="d-flex justify-content-between mt-3">
-          <button type="button" class="btn btn-secondary" onclick="if (validarSeccion(3)) cambiarSeccion(2, 25, 2)">Atrás</button>
+          <button type="button" class="btn btn-secondary" onclick="cambiarSeccion(2, 25, 2)">Atrás</button>
           <button type="button" class="btn btn-primary" onclick="if (validarSeccion(3)) cambiarSeccion(4, 75, 4)">Siguiente</button>
         </div>
       </div>
@@ -1690,7 +1690,7 @@ condiciones de trabajo. Elige UNA SOLA RESPUESTA para cada una de ellas.
 
         <!-- Navegación -->
         <div class="d-flex justify-content-between mt-3">
-          <button type="button" class="btn btn-secondary" onclick="if (validarSeccion(4)) cambiarSeccion(3, 50, 3)">Atrás</button>
+          <button type="button" class="btn btn-secondary" onclick="cambiarSeccion(3, 50, 3)">Atrás</button>
           <button type="button" class="btn btn-primary" onclick="if (validarSeccion(4)) cambiarSeccion(5, 100, 5)">Siguiente</button>
         </div>
       </div>
@@ -2159,7 +2159,7 @@ consideración?
 
         <!-- Navegación -->
         <div class="d-flex justify-content-between mt-3">
-          <button type="button" class="btn btn-secondary" onclick="if (validarSeccion(5)) cambiarSeccion(4, 75, 16)">Atrás</button>
+          <button type="button" class="btn btn-secondary" onclick="cambiarSeccion(4, 75, 16)">Atrás</button>
            <!-- Botón Finalizar -->
 <button type="button" class="btn btn-success"  onclick="finalizarCuestionario()">
   FINALIZAR

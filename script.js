@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // Mostrar/ocultar preguntas individuales
   document.querySelectorAll(".toggle-btn").forEach((btn) => {
@@ -123,13 +125,44 @@ Swal.fire({
 }
 
 
+const imagenesPorSeccion = {
+  1: "/project/assets/img/img1.jpg",
+  2: "/project/assets/img/img2.jpg",
+  3: "/project/assets/img/img3.jpg",
+  4: "/project/assets/img/img4.jpg",
+  5: "/project/assets/img/img5.jpg"
+};
+
+// FUNCION PARA CAMBIAR DE SECCION Y IMAGEN EN LA CABEZERA 
 function cambiarSeccion(seccion, porcentaje, preguntaInicio) {
   document.querySelectorAll('.question-section').forEach(div => div.classList.add('d-none'));
   document.getElementById(`section-${seccion}`).classList.remove('d-none');
-  document.getElementById('progressBar').style.width = `${porcentaje}%`;
-  document.getElementById('progressBar').innerText = `${porcentaje}%`;
-  document.getElementById('currentQuestion').innerText = `Seccion ${preguntaInicio}`;
+  //document.getElementById('progressBar').style.width = `${porcentaje}%`;
+  //document.getElementById('progressBar').innerText = `${porcentaje}%`;
+ // document.getElementById('currentQuestion').innerText = `Seccion ${preguntaInicio}`;
+const progressBar = document.getElementById('progressBar');
+const currentQuestion = document.getElementById('currentQuestion');
+
+if (progressBar) {
+  progressBar.style.width = `${porcentaje}%`;
+  progressBar.innerText = `${porcentaje}%`;
 }
+
+if (currentQuestion) {
+  currentQuestion.innerText = `Sección ${preguntaInicio}`;
+}
+ // 👉 Cambiar imagen
+  const headerImage = document.getElementById("headerImage");
+  //console.log("Sección:", seccion);
+ //console.log("Imagen encontrada:", headerImage);
+  //console.log("Ruta a usar:", imagenesPorSeccion[seccion]);
+
+  if (headerImage && imagenesPorSeccion[seccion]) {
+    headerImage.src = imagenesPorSeccion[seccion];
+  }
+}
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const btnCerrarSesion = document.getElementById("btnCerrarSesion");
@@ -184,3 +217,4 @@ const currentQuestion = document.getElementById('currentQuestion');
 currentQuestion.classList.remove('animate'); // reiniciar animación
 void currentQuestion.offsetWidth; // truco para reiniciarla
 currentQuestion.classList.add('animate');
+
